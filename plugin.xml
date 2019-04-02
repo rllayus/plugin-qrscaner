@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin 
+  xmlns="http://www.phonegap.com/ns/plugins/1.0" id="plugin-qrscanner" version="3.0.1">
+  <name>QRScanner</name>
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  <js-module src="www/QRScanner.js" name="QRScanner">
+    <clobbers target="QRScanner" />
+  </js-module>
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="QRScanner">
+        <param name="android-package" value="com.mc4.qrscanner.QRScanner"/>
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.CAMERA" android:required="false" />
+      <uses-feature android:name="android.hardware.camera" android:required="false" />
+      <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+    </config-file>
+    <source-file src="src/android/QRScanner.java" target-dir="src/com/mc4/qrscanner"/>
+    <framework src="src/android/qrscanner.gradle" custom="true" type="gradleReference"/>
+  </platform>
+
+</plugin>
