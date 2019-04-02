@@ -1,15 +1,20 @@
 {
-    "name": "helloworld",
-    "displayName": "HelloCordova",
+    "name": "QRScanner",
+    "displayName": "QRScanner",
     "version": "1.0.0",
-    "description": "A sample Apache Cordova application that responds to the deviceready event.",
-    "main": "index.js",
+    "description": "Plugin para lectura de codigo QR de Banco FIE",
+    "cordova": {
+        "id": "plugin-qrscanner",
+        "platforms": [
+            "android"
+        ]
+    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
         "ecosystem:cordova"
     ],
-    "author": "Apache Cordova Team",
+    "author": "MC4",
     "license": "Apache-2.0"
 }
