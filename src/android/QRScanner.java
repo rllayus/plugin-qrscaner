@@ -20,12 +20,12 @@ public class QRScanner extends CordovaPlugin {
                 pluginResult.setKeepCallback(true);
                 callbackContext.sendPluginResult(pluginResult);
                 success = true;
-            }catch(Exception e){
-                Log.e("QRScanner", "Exception: " + e.getMessage());
-                callbackContext.error(e.getMessage());
             }
-            return success;
+        } catch (Exception e) {
+            Log.e("QRScanner", "Exception: " + e.getMessage());
+            callbackContext.error(e.getMessage());
         }
+        return success;
     }
-
 }
+
