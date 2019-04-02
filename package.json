@@ -6,7 +6,8 @@
     "cordova": {
         "id": "plugin-qrscanner",
         "platforms": [
-            "android"
+            "android",
+            "browser"
         ]
     },
     "scripts": {
