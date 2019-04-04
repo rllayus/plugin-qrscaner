@@ -78,6 +78,7 @@ public class QRScanner extends CordovaPlugin implements BarcodeCallback {
         this.callbackContext = callbackContext;
         try {
             if (action.equals("show")) {
+                Log.i(getLocalClassName(), " ******************** ");
                 cordova.getThreadPool().execute(new Runnable() {
                     public void run() {
                         show(callbackContext);
@@ -86,6 +87,7 @@ public class QRScanner extends CordovaPlugin implements BarcodeCallback {
                 return true;
             }
             else if(action.equals("scan")) {
+
                 cordova.getThreadPool().execute(new Runnable() {
                     public void run() {
                         scan(callbackContext);
