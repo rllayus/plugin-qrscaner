@@ -32,6 +32,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.List;
+import android.util.Log;
 
 
 @SuppressWarnings("deprecation")
@@ -78,7 +79,7 @@ public class QRScanner extends CordovaPlugin implements BarcodeCallback {
         this.callbackContext = callbackContext;
         try {
             if (action.equals("show")) {
-                Log.i(getLocalClassName(), " ******************** ");
+                Log.i("QR", " ******************** ");
                 cordova.getThreadPool().execute(new Runnable() {
                     public void run() {
                         show(callbackContext);
