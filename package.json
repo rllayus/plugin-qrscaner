@@ -7,7 +7,8 @@
         "id": "plugin-qrscanner",
         "platforms": [
             "android",
-            "browser"
+            "browser",
+            "ios"
         ]
     },
     "scripts": {
@@ -17,5 +18,5 @@
         "ecosystem:cordova"
     ],
     "author": "MC4",
-    "license": "Apache-2.0"
+    "license": "MIT"
 }
