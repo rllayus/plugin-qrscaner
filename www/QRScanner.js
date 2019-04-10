@@ -88,7 +88,25 @@ var QRScanner = {
             'getStatus', // with this action name
             []
         );
-    }
+    },
+    hide: function(successCallback, errorCallback) {
+            cordova.exec(
+                successCallback, // success callback function
+                errorCallback, // error callback function
+                'QRScanner', // mapped to our native Java class
+                'hide', // with this action name
+                []
+            );
+        },
+    destroy: function(successCallback, errorCallback) {
+                    cordova.exec(
+                        successCallback, // success callback function
+                        errorCallback, // error callback function
+                        'QRScanner', // mapped to our native Java class
+                        'destroy', // with this action name
+                        []
+                    );
+            }
 
 }
 module.exports = QRScanner
